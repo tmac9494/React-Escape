@@ -30,6 +30,7 @@ function Test(props) {
 	const defaults = {
 		transition: ".32s",
 		fill:"#FF2EEA",
+		display: "block"
 	}
 
 
@@ -65,7 +66,7 @@ function Test(props) {
 		Object.keys(newStyle).forEach(target => {
 			let svgTarget = target;
 			// console.log(transforms[svgTarget])
-			newStyle[svgTarget] = Object.assign(newStyle[svgTarget], defaults);
+			newStyle[svgTarget] = Object.assign({}, defaults, newStyle[svgTarget]);
 			newStyle[svgTarget].transform = transforms[svgTarget].join(" ");
 			console.log(newStyle[svgTarget])
 			// console.log(svgTarget)
