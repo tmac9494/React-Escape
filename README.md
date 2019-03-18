@@ -14,7 +14,8 @@ As an unwilling and unaware test subject you awake on this ship the last memory 
 ### **Library:** 
  - react + custom react component library built for handling setting up click and point adventures using svgs.
 
-### **Plot:** escape mysterious syfy ship with a decision at the end(if the player finds the right items before reaching the end)
+### **Plot:** 
+escape mysterious syfy ship with a decision at the end(if the player finds the right items before reaching the end)
  - optional decision idea -- after discovering the failsafe plan in the captains quarters the player understands that returning to earth has a low probability of survival.
 	- if the player has "made contact" you can join an advanced civilization that has taken pity on your prediciment.
 	- else the player establishes communication with a public source on earth following the captain's 
