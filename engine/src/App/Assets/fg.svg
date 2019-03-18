@@ -1,27 +1,19 @@
-<!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
-	<rect x="848" y="372.6" width="245" height="189.4"/>
-	<rect x="289" y="754" width="182" height="326"/>
-	<rect x="938" y="824" width="212" height="212"/>
-	<rect x="1152" y="824" width="212" height="212"/>
-</svg> -->
-
 <svg version="1.1" id="Layer_1" x="0px" y="0px"
-	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
-	<g className="scene-object">
-		<rect className="scene-object-target" x="848" y="372.6" width="245" height="189.4"/>
-		<rect className="scene-object-frame" x="848" y="372.6" width="245" height="189.4"/>
-	</g>
-	<g className="scene-object">
-		<rect className="scene-object-target" x="289" y="754" width="182" height="326"/>
-		<rect className="scene-object-frame" x="289" y="754" width="182" height="326"/>
-	</g>
-	<g className="scene-object">
-		<rect className="scene-object-target" x="938" y="824" width="212" height="212"/>
-		<rect className="scene-object-frame" x="938" y="824" width="212" height="212"/>
-	</g>
-	<g className="scene-object">
-		<rect className="scene-object-target" x="1152" y="824" width="212" height="212"/>
-		<rect className="scene-object-frame" x="1152" y="824" width="212" height="212"/>
-	</g>
+					 viewBox="0 0 1920 1080" style={{enableBackground:"new 0 0 1920 1080"}}>
+<g className="scene-object window">
+	<rect className="scene-object-target" x="848" y="372.6" width="245" height="189.4" />
+	<rect className="scene-object-frame" x="848" y="372.6" width="245" height="189.4" />
+</g>
+<g className="scene-object door">
+	<rect className="scene-object-target" x="289" y="754" width="182" height="326"/>
+	<rect className="scene-object-frame" x="289" y="754" width="182" height="326"/>
+</g>
+<g className="scene-object cab-left">
+	<rect className="scene-object-target orig-left-bottom" x="938" y="824" width="212" height="212"/>
+	<rect className="scene-object-frame" x="938" y="824" width="212" height="212"/>
+</g>
+<g className="scene-object cab-right">
+	<rect className="scene-object-target orig-right-bot" x="1152" y="824" width="212" height="212"/>
+	<rect className="scene-object-frame" x="1152" y="824" width="212" height="212"/>
+</g>
 </svg>
