@@ -30,7 +30,8 @@ function Test(props) {
 	const defaults = {
 		transition: ".32s",
 		fill:"#FF2EEA",
-		display: "block"
+		display: "block",
+		transformOrigin: "center center"
 	}
 
 
@@ -47,21 +48,23 @@ function Test(props) {
 			cabinetLeft: [],
 			cabinetRight: []
 		};
-		// console.log(door.current.getBoundingClientRect().width)
+		// door hover
 		if (doorHover) {
 				transforms.door.push(`translateX(${doorHover ? Math.ceil(door.current.getBoundingClientRect().width) + "px" : 0})`);
-		} else {
-			transforms.door = transforms.door.filter(anims => !anims.includes("translateX"));
-		}
+		} else transforms.door = transforms.door.filter(anims => !anims.includes("translateX"));
+		// window click
 		if (windowClick) {
 			newStyle.window.display = "none";
 		} else newStyle.window.display = "block";
+		// cabinet clicks
 		if (cabinetClick.left) {
-			transforms.cabinet.left.push("scale(0)")
-		} else transforms.cabinetLeft = transforms.cabinetLeft.filter(anims => !anims.includes("scale"));
+			newStyle.cabinetLeft.transformOrigin = "0% 50%";
+			transforms.cabinetLeft.push("rotate3d(0, 1, 0, 40deg)")
+		} else transforms.cabinetLeft = transforms.cabinetLeft.filter(anims => !anims.includes("rotate"));
 		if (cabinetClick.right) {
-			transforms.cabinetRight.push("scale(0)")
-		} else transforms.cabinetRight = transforms.cabinetRight.filter(anims => !anims.includes("scale"));
+			newStyle.cabinetRight.transformOrigin = "100% 50%";
+			transforms.cabinetRight.push("rotate3d(0, 1, 0, 40deg)")
+		} else transforms.cabinetRight = transforms.cabinetRight.filter(anims => !anims.includes("rotate"));
 
 		Object.keys(newStyle).forEach(target => {
 			let svgTarget = target;
@@ -92,11 +95,11 @@ function Test(props) {
 					</g>
 					<g className="scene-object cab-left">
 						<rect className="scene-object-target" x="938" y="824" width="212" height="212" style={style.cabinetLeft}/>
-						<rect className="scene-object-frame" x="938" y="824" width="212" height="212"/>
+						<rect onClick={() => setCabinetClick({right: cabinetClick.right, left: !cabinetClick.left})} className="scene-object-frame" x="938" y="824" width="212" height="212"/>
 					</g>
 					<g className="scene-object cab-right">
 						<rect className="scene-object-target" x="1152" y="824" width="212" height="212" style={style.cabinetRight}/>
-						<rect className="scene-object-frame" x="1152" y="824" width="212" height="212"/>
+						<rect onClick={() => setCabinetClick({right: !cabinetClick.right, left: cabinetClick.left})} className="scene-object-frame" x="1152" y="824" width="212" height="212"/>
 					</g>
 				</svg>
 
