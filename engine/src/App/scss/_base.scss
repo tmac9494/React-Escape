@@ -1,3 +1,4 @@
+@import 'base/base.scss';
 * {
   box-sizing:border-box;
 }
@@ -14,12 +15,40 @@ div {
   }
 }
 
+// svg .scene-object-target {
+// 	display:block;
+// 	transform-box: fill-box;
+// }
+svg {
+	.scene-object-target {
+		display:block;
+		transform-box: fill-box;
+	}
+	.orig-left-bot {
+		transform-origin: left bottom;
+	}
+	.orig-right-bot {
+		transform-origin: right bottom;
+	}
+	.scene-object-frame {
+		fill:rgba(0,0,0,0);
+		cursor:pointer;
+		stroke:yellow;
+		stroke-width:1px;
+	}
 
-
-svg .hover-target.active {
-  /*transform:translate;*/
 }
 
 
+// svg .hover-target.active {
+//   /*transform:translate;*/
+// }
 
-.scene-object-frame {fill:rgba(0,0,0,0);}
+
+
+// .scene-object-frame {
+// 	fill:rgba(0,0,0,0);
+// 	cursor:pointer;
+// 	stroke:yellow;
+// 	stroke-width:1px;
+// }
