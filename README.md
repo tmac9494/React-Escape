@@ -6,6 +6,7 @@ stationed in the outer reaches of our solar system.
 
 As an unwilling and unaware test subject you awake on this ship the last memory you have is of your life on earth, and something has gone wrong on the <Titan II>. Escape.
 
+
 ## **General Idea**
 ----------------
 ### **Style:** 
@@ -20,12 +21,23 @@ escape mysterious syfy ship with a decision at the end(if the player finds the r
 	- if the player has "made contact" you can join an advanced civilization that has taken pity on your prediciment.
 	- else the player establishes communication with a public source on earth following the captain's 
 	hidden jornal and procedes home.(only to die anyway, the captain was a known enemy of the project?? you have to "make contact"??)
-
-
-
+	
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## **A: Gameplay**
 --------------------------
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ### **1. User Buffs/Stats:**
 
@@ -109,13 +121,27 @@ or if the user has a certain buff/item they will be able to solve the puzzle fas
 
 
 
-
-
-
-
+	
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## B: Actions
 --------------------
+
+	
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+
 
 ### 1. player actions
 
