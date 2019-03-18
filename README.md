@@ -39,30 +39,30 @@ escape mysterious syfy ship with a decision at the end(if the player finds the r
 ---------------
 
 - Health
- - general health bar used to prevent spamming mechanics to cheat the game logic.(keep trying random codes? keep getting shocked.)
+ 	- general health bar used to prevent spamming mechanics to cheat the game logic.(keep trying random codes? keep getting shocked.)
 
 - Oxygen
- - suit oxygen bar letting you know how long you have left in your suits oxygen ???
- - player oxygen bar letting you know home long your player can hold their breath until health starts depleteing
+ 	- suit oxygen bar letting you know how long you have left in your suits oxygen ???
+ 	- player oxygen bar letting you know home long your player can hold their breath until health starts depleteing
 
 
  *BUFFS:*
 --------------
 
 - Strength - (stat, mutation)
- - gained with suit/ experimental gene editor from research lab(id: 172)/ can be hacked with specific items(ie hydraulic tools?).
+ 	- gained with suit/ experimental gene editor from research lab(id: 172)/ can be hacked with specific items(ie hydraulic tools?).
 
 
 - Engineering - (stat, mutation)
- - will allow solving certain evironment puzzles with less items
- - gained with experimental gene editor from research Lab(id: 172)
+ 	- will allow solving certain evironment puzzles with less items
+ 	- gained with experimental gene editor from research Lab(id: 172)
 
 
 - Electron Generator - (item)
- - creates electrical charge that can solve electricity outtage puzzles(hard to find)
+ 	- creates electrical charge that can solve electricity outtage puzzles(hard to find)
 
 - Hydraulic exoskeleton - (item, suit)
- - provides strength stat boost without needing gene editor.
+ 	- provides strength stat boost without needing gene editor.
 
 
 
@@ -87,18 +87,18 @@ or if the user has a certain buff/item they will be able to solve the puzzle fas
 
 
 - Strength
- - obstacles that require either a not obvious item/item combination or a strength attribute gained either by suit or someother optional sidequest in one of the research labs.
+ 	- obstacles that require either a not obvious item/item combination or a strength attribute gained either by suit or someother optional sidequest in one of the research labs.
 
 - Electricity Outtage
- - solved with specific suit???/ research lab discovery/ annoying environment puzzle.
+ 	- solved with specific suit???/ research lab discovery/ annoying environment puzzle.
 
 
 ### 4. Looting
 
 - scrap metal (for item crafting, engineering gates)
-  - gained from crates, loose panels, item dismantling.
+  	- gained from crates, loose panels, item dismantling.
 - items
-  - cabinets, desks, person's inventory or on the ground by them??
+  	- cabinets, desks, person's inventory or on the ground by them??
 
 
 ### 5. Crafting
@@ -120,27 +120,27 @@ or if the user has a certain buff/item they will be able to solve the puzzle fas
 ### 1. player actions
 
 - Movement 
- - front, back, left, right, (front left and front right???)
+ 	- front, back, left, right, (front left and front right???)
 
 
 - Inventory
- - equip item for use in the environment,
- - equip helmet, outfit (provides stat or protection)
- - combine items (workbench??, chemistry???)
+ 	- equip item for use in the environment,
+ 	- equip helmet, outfit (provides stat or protection)
+ 	- combine items (workbench??, chemistry???)
 
 
 ### 2. Environment Interactions
 
 - Doors
- - svg needs to sit ontop of evnironment background and appear to slide open.
- -  button
+ 	- svg needs to sit ontop of evnironment background and appear to slide open.
+ 	-  button
 
 
 - Puzzles for doors/compartments
- - keypads(find pin)???
- - Card Swipe unlock(find card)
- - electrical repair(item or puzzle & environment)
- - strength attribute/item requirement.
+ 	- keypads(find pin)???
+ 	- Card Swipe unlock(find card)
+ 	- electrical repair(item or puzzle & environment)
+ 	- strength attribute/item requirement.
 
 
 
