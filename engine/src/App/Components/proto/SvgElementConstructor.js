@@ -32,7 +32,11 @@ function ElementConstruct(svg, options={}) {
 					//add props for state updates
 					const settings = options.sceneObjects[elem.props["data-id"]];
 					const event = settings.interactType === "click" ? "onClick" : "hover" ? "onMouseOver" : "onClick";
-					customProps[event] = () => options.stateSetter(elem.props["data-id"]);
+
+					if (event === "onMouseOver") {
+						customProps["onMouseOver"] = () => options.stateSetter(elem.props["data-id"], true);
+						customProps["onMouseOut"] = () => options.stateSetter(elem.props["data-id"], false);
+					} else customProps[event] = () => options.stateSetter(elem.props["data-id"]);
 				}
 				console.log(customProps)
 				// frame

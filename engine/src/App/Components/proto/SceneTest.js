@@ -7,21 +7,22 @@ function Scene(props) {
 	const [mounted, setMounted] = useState(false);
 	const [interactions, setInteractions] = useState(Object.assign({}, props.state));
 
-	const updateInteractions = (objId) => {
+	const updateInteractions = (objId, bool=null) => {
 		let ints = interactions;
-		ints[objId] = !ints[objId];
+		ints[objId] =  bool === null ? !ints[objId] : bool;
+		// make sure taking previous changes into account when saving
 		setInteractions(prevInts => { 
 			return {...prevInts, ...ints};
 		});
 	}
-	const [objects, setObjects] = useState(null);
+	const [scenFG, setSceneFG] = useState(null);
 
 	// moun/unmount
 	useEffect(() => {
 		setMounted(true);
-		if (objects === null) {
+		if (scenFG === null) {
 			// build svg from foreground data and svgBuilder hook
-			setObjects(svgBuild(props.fg, {
+			setSceneFG(svgBuild(props.fg, {
 				scene: props.scene,
 				sceneObjects: props.sceneObjects,
 				interactions: interactions,
@@ -38,10 +39,10 @@ function Scene(props) {
 
 	// manage svg changes on interaction
 	useEffect(() => {
-		if (objects !== null & interactions !== null) {
-			let svg = Object.assign({}, objects);
+		if (scenFG !== null & interactions !== null) {
+			let svg = Object.assign({}, scenFG);
 			let newElem = [];
-			objects.props.children.forEach((child, i) => {
+			scenFG.props.children.forEach((child, i) => {
 				if (child.props['data-id']) {
 
 					// test to see if tranformation is true
@@ -74,19 +75,19 @@ function Scene(props) {
 				} else newElem.push(child);
 			})
 			const newSvg = React.cloneElement(
-				objects,
+				scenFG,
 				{},
 				newElem
 			)
 			console.log(newSvg)
-			setObjects(newSvg);
+			setSceneFG(newSvg);
 		}
 	}, [interactions])
 
 
 	return(
 		<div className="rx8p_scene" style={{background: `url(${bg}) no-repeat center center`, backgroundSize: "contain"}}>
-			{objects}
+			{scenFG}
 		</div>
 	);
 }

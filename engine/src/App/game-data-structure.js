@@ -64,7 +64,7 @@ const gameData = {
 					interactType: "hover",
 					reference: true,
 					refValue: "width",
-					interactCss: {transorm: "translateX(%%ref%%)"}
+					interactCss: {transform: "translateX(100%)"}
 					// conditional
 							//  ^^ ??? use bool here to know if this object's interaction is locked until something is true
 				},
