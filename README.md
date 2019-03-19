@@ -6,18 +6,16 @@ stationed in the outer reaches of our solar system.
 
 As an unwilling and unaware test subject you awake on this ship the last memory you have is of your life on earth, and something has gone wrong on the <Titan II>. Escape.
 
+-  **General Idea**
+	- **Style:** 
+ 	- rick and mortyish?(svg friendly)
 
-## **General Idea**
-----------------
-### **Style:** 
- - rick and mortyish?(svg friendly)
+- **Library:** 
+	- react + custom react component library built for handling setting up click and point adventures using svgs.
 
-### **Library:** 
- - react + custom react component library built for handling setting up click and point adventures using svgs.
-
-### **Plot:** 
+- **Plot:** 
 escape mysterious syfy ship with a decision at the end(if the player finds the right items before reaching the end)
- - optional decision idea -- after discovering the failsafe plan in the captains quarters the player understands that returning to earth has a low probability of survival.
+	- optional decision idea -- after discovering the failsafe plan in the captains quarters the player understands that returning to earth has a low probability of survival.
 	- if the player has "made contact" you can join an advanced civilization that has taken pity on your prediciment.
 	- else the player establishes communication with a public source on earth following the captain's 
 	hidden jornal and procedes home.(only to die anyway, the captain was a known enemy of the project?? you have to "make contact"??)
