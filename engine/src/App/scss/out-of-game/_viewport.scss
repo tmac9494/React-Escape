@@ -1,0 +1,12 @@
+main#main {
+	background: #29252c;
+	position:relative;
+	width:100%;
+	min-height:100vh;
+}
+#game-master-viewport {
+	// width: 1920px;
+	// height: 1080px;
+	background:#000;
+	@extend %abs-center;
+}

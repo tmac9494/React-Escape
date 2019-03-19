@@ -1,4 +1,5 @@
 @import 'base/base.scss';
+@import 'out-of-game/base';
 * {
   box-sizing:border-box;
 }
@@ -15,19 +16,17 @@ div {
   }
 }
 
-// svg .scene-object-target {
-// 	display:block;
-// 	transform-box: fill-box;
-// }
+
 svg {
 	.scene-object-target {
 		display:block;
 		transform-box: fill-box;
+		fill: rgb(255, 46, 234);
 	}
-	.orig-left-bot {
+	.orig-l-b {
 		transform-origin: left bottom;
 	}
-	.orig-right-bot {
+	.orig-r-b {
 		transform-origin: right bottom;
 	}
 	.scene-object-frame {
@@ -39,16 +38,9 @@ svg {
 
 }
 
-
-// svg .hover-target.active {
-//   /*transform:translate;*/
-// }
-
-
-
-// .scene-object-frame {
-// 	fill:rgba(0,0,0,0);
-// 	cursor:pointer;
-// 	stroke:yellow;
-// 	stroke-width:1px;
-// }
+// scene
+.rx8p_scene {
+	background-size:contain;
+	width:100%;
+	height:100%;
+}

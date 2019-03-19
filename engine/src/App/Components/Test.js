@@ -123,11 +123,11 @@ function Test(props) {
 						<rect className="scene-object-frame" onMouseOver={() => setDoorHover(true)} onMouseOut={() => setDoorHover(false)}  x="289" y="754" width="182" height="326"/>
 					</g>
 					<g className="scene-object cab-left">
-						<rect className="scene-object-target orig-left-bottom" x="938" y="824" width="212" height="212" style={style.cabinetLeft} transform={animations.cabinetLeft.join(" ")}/>
+						<rect className="scene-object-target orig-l-b" x="938" y="824" width="212" height="212" style={style.cabinetLeft} transform={animations.cabinetLeft.join(" ")}/>
 						<rect onClick={() => setCabinetClick({right: cabinetClick.right, left: !cabinetClick.left})} className="scene-object-frame" x="938" y="824" width="212" height="212"/>
 					</g>
 					<g className="scene-object cab-right">
-						<rect className="scene-object-target orig-right-bot" x="1152" y="824" width="212" height="212" style={style.cabinetRight} transform={animations.cabinetRight.join(" ")}/>
+						<rect className="scene-object-target orig-r-b" x="1152" y="824" width="212" height="212" style={style.cabinetRight} transform={animations.cabinetRight.join(" ")}/>
 						<rect onClick={() => setCabinetClick({right: !cabinetClick.right, left: cabinetClick.left})} className="scene-object-frame" x="1152" y="824" width="212" height="212"/>
 					</g>
 				</svg>

@@ -1,11 +1,13 @@
-module.exports = {
+import React from 'react';
+
+const gameData = {
 	Scenes: [
 		// ------------------------
 		//	test
 		// ------------------------
 		{
 			id: "scene-test",
-			forground: ["scene-fg-test"],
+			foreground: ["scene-fg-test"],
 			background: ["scene-bg-test"],
 			sceneIndex: 0,
 		},
@@ -45,16 +47,16 @@ module.exports = {
 	],
 
 
-	foregrounds: [
+	Foregrounds: [
 		{
 			// forground id
-			id: "screen-fg-test",
+			id: "scene-fg-test",
 			svg: "fg.svg",
 			state: {
-				doorOpen: false,
-				windowClicked: false,
-				leftCabinetOpen: false,
-				rightCabinetOpen: false,
+				testDoor: false,
+				testWindow: false,
+				testCabinetLeft: false,
+				testCabinetRight: false,
 			},
 			sceneObjects: {
 				testDoor: {
@@ -81,7 +83,22 @@ module.exports = {
 					interactType: "click",
 					interactCss: {transform: "rotate3d(0, 1, 0, -40deg)"}
 				}
-			}
+			},
+			svgFG: (<svg version="1.1" id="Layer_1" x="0px" y="0px"
+					 viewBox="0 0 1920 1080" style={{enableBackground:"new 0 0 1920 1080"}}>
+					<g className="scene-object window" data-id="testWindow">
+						<rect className="scene-object-target" x="848" y="372.6" width="245" height="189.4" />
+					</g>
+					<g className="scene-object door" data-id="testDoor">
+						<rect className="scene-object-target" x="289" y="754" width="182" height="326"/>
+					</g>
+					<g className="scene-object cab-left" data-id="testCabinetLeft">
+						<rect className="scene-object-target orig-l-b" x="938" y="824" width="212" height="212"/>
+					</g>
+					<g className="scene-object cab-right" data-id="testCabinetRight">
+						<rect className="scene-object-target orig-r-b" x="1152" y="824" width="212" height="212"/>
+					</g>
+				</svg>),
 		},
 	],
 
@@ -92,3 +109,5 @@ module.exports = {
 		},
 	]
 }
+
+export default gameData;

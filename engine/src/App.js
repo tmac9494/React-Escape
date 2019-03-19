@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     const App = () => (
       <div>
-        <main>
+        <main id="main">
           <Switch>
             <Route exact path='/' component={Test}/>
             <Route exact path='/proto' component={Proto}/>
