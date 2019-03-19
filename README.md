@@ -1,5 +1,4 @@
 # GAME IDEAS
-----------------------------
 
 Aboard The ALDINI V unknowingly part of project DARWIN'S SHROUD --the most secure global government research project man-kind has ever created 
 stationed in the outer reaches of our solar system.
@@ -28,7 +27,6 @@ escape mysterious syfy ship with a decision at the end(if the player finds the r
 &nbsp;
 
 ## **A: Gameplay**
---------------------------
 
 &nbsp;
 &nbsp;
@@ -45,34 +43,32 @@ escape mysterious syfy ship with a decision at the end(if the player finds the r
  	- optional mechanics that will create an easier game for the player if the are savvy enough to find them.
 
 
- *STATS:*
----------------
+ - *STATS:*
 
-- Health
- 	- general health bar used to prevent spamming mechanics to cheat the game logic.(keep trying random codes? keep getting shocked.)
+	- Health
+ 		- general health bar used to prevent spamming mechanics to cheat the game logic.(keep trying random codes? keep getting shocked.)
 
-- Oxygen
- 	- suit oxygen bar letting you know how long you have left in your suits oxygen ???
- 	- player oxygen bar letting you know home long your player can hold their breath until health starts depleteing
-
-
- *BUFFS:*
---------------
-
-- Strength - (stat, mutation)
- 	- gained with suit/ experimental gene editor from research lab(id: 172)/ can be hacked with specific items(ie hydraulic tools?).
+-	 Oxygen
+ 		- suit oxygen bar letting you know how long you have left in your suits oxygen ???
+ 		- player oxygen bar letting you know home long your player can hold their breath until health starts depleteing
 
 
-- Engineering - (stat, mutation)
- 	- will allow solving certain evironment puzzles with less items
- 	- gained with experimental gene editor from research Lab(id: 172)
+ - *BUFFS:*
+
+	- Strength - (stat, mutation)
+ 		- gained with suit/ experimental gene editor from research lab(id: 172)/ can be hacked with specific items(ie hydraulic tools?).
 
 
-- Electron Generator - (item)
- 	- creates electrical charge that can solve electricity outtage puzzles(hard to find)
+	- Engineering - (stat, mutation)
+ 		- will allow solving certain evironment puzzles with less items
+ 		- gained with experimental gene editor from research Lab(id: 172)
 
-- Hydraulic exoskeleton - (item, suit)
- 	- provides strength stat boost without needing gene editor.
+
+	- Electron Generator - (item)
+ 		- creates electrical charge that can solve electricity outtage puzzles(hard to find)
+
+	- Hydraulic exoskeleton - (item, suit)
+ 		- provides strength stat boost without needing gene editor.
 
 
 
