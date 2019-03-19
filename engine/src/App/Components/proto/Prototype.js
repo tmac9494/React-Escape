@@ -25,14 +25,14 @@ function GameMaster(props) {
 			if (max.width < parseInt(synthViewPort.width)) {
 				vpNew.width = max.width + "px";
 				vpNew.height = (max.width * vpRatios.h) + "px";
-				console.log(vpNew)
+				// console.log(vpNew)
 				setSynthViewPort(vpNew);
 			}
 			// hieght fix
 			if (max.height < parseInt(vpNew.height)) {
 				vpNew.height = max.height + "px";
 				vpNew.width = max.height * vpRatios.w + "px";
-				console.log(vpNew)
+				// console.log(vpNew)
 				setSynthViewPort(vpNew);
 			}
 		// }
@@ -45,7 +45,7 @@ function GameMaster(props) {
 
 	const currentScene = gameFile.Scenes.slice().filter(scene => scene.id === sceneId)[0];
 	const foreGround = gameFile.Foregrounds.slice().filter(fg => fg.id === currentScene.foreground[0])[0];
-	console.log(foreGround);
+	// console.log(foreGround);
 
 	return(
 		<div id="game-master-viewport" style={{display:"block", width: synthViewPort.width, height:synthViewPort.height}}>

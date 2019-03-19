@@ -4,60 +4,85 @@ import svgBuild from './SvgElementConstructor';
 
 function Scene(props) {
 
-	const [interactions, setInteractions] = useState(props.state);
+	const [mounted, setMounted] = useState(false);
+	const [interactions, setInteractions] = useState(Object.assign({}, props.state));
 
 	const updateInteractions = (objId) => {
-		console.log(objId)
-		let ints = Object.assign({}, interactions);
-		console.log(ints)
+		let ints = interactions;
 		ints[objId] = !ints[objId];
-		setInteractions(ints);
+		setInteractions(prevInts => { 
+			return {...prevInts, ...ints};
+		});
 	}
-	const [objects, setObjects] = useState(svgBuild(props.fg, {
-		scene: props.scene,
-		sceneObjects: props.sceneObjects,
-		interactions: interactions,
-		stateSetter: updateInteractions,
-	}))
+	const [objects, setObjects] = useState(null);
 
-	console.log(props.fg)
-	// const foregr = svgBuild(props.fg, {
-	// 	scene: props.scene,
-	// 	interactions: interactions,
-	// 	stateSetter: updateInteractions,
-	// });
-	// console.log(foregr.props.children)
-
-
-
+	// moun/unmount
 	useEffect(() => {
-		// let newInts = {};]
-		// return();
-		let svg = Object.assign({}, objects);
-		console.log(svg)
-		let newElem = [];
-		let newSvg = false;
-		console.log(svg)
-		objects.props.children.forEach(elem => {
-			console.log(elem)
-			if (Array.isArray(elem)) {elem.forEach(elem => {
-			if (interactions[elem.props['data-id']]) {
-			 	let style = props.sceneObjects[elem.props['data-id']].interactCss;
-			 	newElem.push(React.cloneElement(
-			 		elem,
-			 		style,
-			 		elem.props.children
-			 	));
-			}
-			})}
-		})
-		newSvg = React.cloneElement(
-			svg,
-			svg.props.style,
-			[svg.props.children, ...newElem]
-		)
-		setObjects(newSvg);
+		setMounted(true);
+		if (objects === null) {
+			// build svg from foreground data and svgBuilder hook
+			setObjects(svgBuild(props.fg, {
+				scene: props.scene,
+				sceneObjects: props.sceneObjects,
+				interactions: interactions,
+				stateSetter: updateInteractions,
+			}))
+		}
+		 return(() => setMounted(false))
+	}, []);
+
+	// className of object wrap
+	const rx8pParentClass = "scene-object";
+	// className of Object target
+	const rx8pTargetClass = "scene-object-target";
+
+	// manage svg changes on interaction
+	useEffect(() => {
+		if (objects !== null & interactions !== null) {
+			let svg = Object.assign({}, objects);
+			let newElem = [];
+			objects.props.children.forEach((child, i) => {
+				if (child.props['data-id']) {
+
+					// test to see if tranformation is true
+					let style = interactions[child.props['data-id']] ? props.sceneObjects[child.props['data-id']].interactCss : {};
+
+					// generate new svg children after interaction 
+				 	let newChildren = child.props.children.map((dirChild, i) => {
+
+				 		let returnChild;
+
+				 		if (dirChild.props.className.includes(rx8pTargetClass)) {
+				 			console.log("clone 2")
+					 		const clone = React.cloneElement(
+						 		dirChild,
+						 		{style: style},
+						 	);
+						 	returnChild = clone;
+				 		} else { returnChild = dirChild };
+				 		
+				 		return returnChild;
+				 	})
+
+				 	// clone group wrapper and add to new svg
+			 		const wrapClone = React.cloneElement(
+			 			child,
+			 			child.props,
+			 			newChildren
+			 		);
+				 	newElem.push(wrapClone);
+				} else newElem.push(child);
+			})
+			const newSvg = React.cloneElement(
+				objects,
+				{},
+				newElem
+			)
+			console.log(newSvg)
+			setObjects(newSvg);
+		}
 	}, [interactions])
+
 
 	return(
 		<div className="rx8p_scene" style={{background: `url(${bg}) no-repeat center center`, backgroundSize: "contain"}}>

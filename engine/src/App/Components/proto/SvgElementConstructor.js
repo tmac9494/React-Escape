@@ -31,19 +31,20 @@ function ElementConstruct(svg, options={}) {
 				if (elem.props["data-id"]) {
 					//add props for state updates
 					const settings = options.sceneObjects[elem.props["data-id"]];
-					customProps[`on${settings.interactType.charAt(0).toUpperCase() + settings.interactType.slice(1)}`] = () => options.stateSetter(elem.props["data-id"]);
+					const event = settings.interactType === "click" ? "onClick" : "hover" ? "onMouseOver" : "onClick";
+					customProps[event] = () => options.stateSetter(elem.props["data-id"]);
 				}
 				console.log(customProps)
 				// frame
 				clone = React.cloneElement(
 					shouldClone,
 					customProps,
-					shouldClone.props.children,
+					[],
 				)
 				// craft new grouped element
 				newElem = React.cloneElement(
 					elem,
-					{key:i},
+					{},
 					[shouldClone,clone]
 				)
 			}

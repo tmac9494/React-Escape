@@ -22,6 +22,7 @@ svg {
 		display:block;
 		transform-box: fill-box;
 		fill: rgb(255, 46, 234);
+		transition:.32s;
 	}
 	.orig-l-b {
 		transform-origin: left bottom;
