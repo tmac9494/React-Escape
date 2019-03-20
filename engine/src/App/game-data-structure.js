@@ -66,26 +66,22 @@ const gameData = {
 			},
 			sceneObjects: {
 				testDoor: {
-					state: "doorOpen",
 					interactType: "hover",
-					reference: true,
-					refValue: "width",
+					// reference: true,
+					// refValue: "width",
 					interactCss: {transform: "translateX(100%)"}
 					// conditional
 							//  ^^ ??? use bool here to know if this object's interaction is locked until something is true
 				},
 				testWindow: {
-					state: "windowClicked",
 					interactType: "click",
 					interactCss: {display: "none"}
 				},
 				testCabinetLeft: {
-					state: "leftCabinetOpen",
 					interactType: "click",
 					interactCss: {transform: "rotate3d(0, 1, 0, 40deg)"}
 				},
 				testCabinetRight: {
-					state: "rightCabinetOpen",
 					interactType: "click",
 					interactCss: {transform: "rotate3d(0, 1, 0, -40deg)"}
 				}
@@ -119,17 +115,14 @@ const gameData = {
 			},
 			sceneObjects: {
 				leftDoor: {
-					state: "windowClicked",
 					interactType: "click",
-					interactCss: {transform: "translate(-100%, 0%) scale(1.15)"}
+					interactCss: {transform: "translate(-100%, 0%) scale(1.145)"}
 				},
 				rightDoor: {
-					state: "leftCabinetOpen",
 					interactType: "click",
 					interactCss: {transform: "rotate3d(0, 1, 0, 40deg)"}
 				},
 				centerDoor: {
-					state: "rightCabinetOpen",
 					interactType: "click",
 					interactCss: {transform: "translateX(100%"}
 				}

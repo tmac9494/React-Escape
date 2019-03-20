@@ -19,24 +19,20 @@ function GameMaster(props) {
 	useEffect(() => {
 		setMounted(true);
 		let vpNew = {};
-		// function vpFix() {
-			const max = {width: (window.innerWidth * .9), height: (window.innerHeight * .9)}
-			// width fiz
-			if (max.width < parseInt(synthViewPort.width)) {
-				vpNew.width = max.width + "px";
-				vpNew.height = (max.width * vpRatios.h) + "px";
-				// console.log(vpNew)
-				setSynthViewPort(vpNew);
-			}
-			// hieght fix
-			if (max.height < parseInt(vpNew.height)) {
-				vpNew.height = max.height + "px";
-				vpNew.width = max.height * vpRatios.w + "px";
-				// console.log(vpNew)
-				setSynthViewPort(vpNew);
-			}
-		// }
-		// vpFix();
+		
+		const max = {width: (window.innerWidth * .9), height: (window.innerHeight * .9)}
+		// width fiz
+		if (max.width < parseInt(synthViewPort.width)) {
+			vpNew.width = max.width + "px";
+			vpNew.height = (max.width * vpRatios.h) + "px";
+			setSynthViewPort(vpNew);
+		}
+		// hieght fix
+		if (max.height < parseInt(vpNew.height)) {
+			vpNew.height = max.height + "px";
+			vpNew.width = max.height * vpRatios.w + "px";
+			setSynthViewPort(vpNew);
+		}
 
 		return ( // unmount
 			() => setMounted(false));

@@ -15,12 +15,12 @@ function Scene(props) {
 			return {...prevInts, ...ints};
 		});
 	}
-	const [scenFG, setSceneFG] = useState(null);
+	const [sceneFG, setSceneFG] = useState(null);
 
 	// moun/unmount
 	useEffect(() => {
 		setMounted(true);
-		if (scenFG === null) {
+		if (sceneFG === null) {
 			// build svg from foreground data and svgBuilder hook
 			setSceneFG(svgBuild(props.fg, {
 				scene: props.scene,
@@ -39,10 +39,10 @@ function Scene(props) {
 
 	// manage svg changes on interaction
 	useEffect(() => {
-		if (scenFG !== null & interactions !== null) {
-			let svg = Object.assign({}, scenFG);
+		if (sceneFG !== null & interactions !== null) {
+			let svg = Object.assign({}, sceneFG);
 			let newElem = [];
-			scenFG.props.children.forEach((child, i) => {
+			sceneFG.props.children.forEach((child, i) => {
 				if (child.props['data-id']) {
 
 					// test to see if tranformation is true
@@ -75,7 +75,7 @@ function Scene(props) {
 				} else newElem.push(child);
 			})
 			const newSvg = React.cloneElement(
-				scenFG,
+				sceneFG,
 				{},
 				newElem
 			)
@@ -87,7 +87,7 @@ function Scene(props) {
 
 	return(
 		<div className="rx8p_scene" style={{background: `url(${bg}) no-repeat center center`, backgroundSize: "contain"}}>
-			{scenFG}
+			{sceneFG}
 		</div>
 	);
 }
