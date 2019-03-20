@@ -1,0 +1,21 @@
+<svg version="1.1" id="Layer_1" x="0px" y="0px"
+	 viewBox="0 0 1920 1080" style={enableBackground:"new 0 0 1920 1080;"}>
+<g key="leftDoor" className="scene-object" data-id="leftDoor">
+	<g className="scene-object-target">
+		<polygon class="st0" points="517,264.5 375,240 375,777 517,704.5 	"/>
+		<rect x="347" y="240" class="st1" width="28" height="537"/>
+	</g>
+</g>
+<g key="rightDoor" className="scene-object" data-id="rightDoor">
+	<g className="scene-object-target">
+		<polygon class="st0" points="1383,248.4 1525,210 1525,846 1377,778.3 	"/>
+		<rect x="1525" y="210" transform="matrix(-1 -5.242574e-11 5.242574e-11 -1 3078 1056)" class="st1" width="28" height="636"/>
+	</g>
+</g>
+<g key="centerDoor" className="scene-object" data-id="centerDoor">
+	<g className="scene-object-target">
+		<rect x="718" y="291" class="st0" width="190" height="394"/>
+		<rect x="908" y="291" class="st2" width="8" height="394"/>
+	</g>
+</g>
+</svg>

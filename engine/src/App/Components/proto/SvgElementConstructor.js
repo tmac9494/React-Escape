@@ -43,7 +43,7 @@ function ElementConstruct(svg, options={}) {
 				clone = React.cloneElement(
 					shouldClone,
 					customProps,
-					[],
+					shouldClone.props.children,
 				)
 				// craft new grouped element
 				newElem = React.cloneElement(

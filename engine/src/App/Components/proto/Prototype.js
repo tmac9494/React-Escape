@@ -9,7 +9,7 @@ function GameMaster(props) {
 	const [mounted, setMounted] = useState(false);
 	const [sceneIndex, setSceneIndex] = useState(0);
 	const [roomIndex, setRoomIndex] = useState(0);
-	const [sceneId, setSceneId] = useState("scene-test")
+	const [sceneId, setSceneId] = useState("proto-test")
 	const [synthViewPort, setSynthViewPort] = useState({
 		width: "1920px",
 		height: "1080px",

@@ -1,0 +1,30 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f2f2;
+      }
+
+      .cls-2 {
+        fill: #e8e6e6;
+      }
+
+      .cls-3 {
+        fill: #dbd9d9;
+      }
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g id="scene-object">
+    <polygon class="cls-1" points="603 254.51 461 230 461 767 603 694.55 603 254.51"/>
+    <rect class="cls-2" x="433" y="230" width="28" height="537"/>
+  </g>
+  <g id="scene-object-2" data-name="scene-object">
+    <polygon class="cls-1" points="1469 238.39 1611 200 1611 836 1463 768.28 1469 238.39"/>
+    <rect class="cls-2" x="1611" y="200" width="28" height="636" transform="translate(3250 1036) rotate(-180)"/>
+  </g>
+  <g id="scene-object-3" data-name="scene-object">
+    <rect class="cls-1" x="804" y="281" width="190" height="394"/>
+    <rect class="cls-3" x="994" y="281" width="8" height="394"/>
+  </g>
+</svg>

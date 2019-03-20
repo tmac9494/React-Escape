@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import bg from '../../Assets/backround.png';
+import bg from '../../Assets/doorTestBg.png';
 import svgBuild from './SvgElementConstructor';
 
 function Scene(props) {

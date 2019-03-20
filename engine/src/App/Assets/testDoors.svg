@@ -1,0 +1,30 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1206 636">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f2f2;
+      }
+
+      .cls-2 {
+        fill: #e8e6e6;
+      }
+
+      .cls-3 {
+        fill: #dbd9d9;
+      }
+    </style>
+  </defs>
+  <title>testDoors</title>
+  <g id="scene-object">
+    <polygon class="cls-1" points="170 54.51 28 30 28 567 170 494.55 170 54.51"/>
+    <rect class="cls-2" y="30" width="28" height="537"/>
+  </g>
+  <g id="scene-object-2" data-name="scene-object">
+    <polygon class="cls-1" points="1036 38.39 1178 0 1178 636 1030 568.28 1036 38.39"/>
+    <rect class="cls-2" x="1611" y="200" width="28" height="636" transform="translate(2817 836) rotate(-180)"/>
+  </g>
+  <g id="scene-object-3" data-name="scene-object">
+    <rect class="cls-1" x="371" y="81" width="190" height="394"/>
+    <rect class="cls-3" x="561" y="81" width="8" height="394"/>
+  </g>
+</svg>
