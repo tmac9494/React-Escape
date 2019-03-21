@@ -116,6 +116,7 @@ const gameData = {
 			sceneObjects: {
 				leftDoor: {
 					interactType: "click",
+					retainEventPosition: true,
 					interactCss: {transform: "translate(-100%, 0%) scale(1.145)"}
 				},
 				rightDoor: {
@@ -129,22 +130,22 @@ const gameData = {
 			},
 			svgFG: (
 				<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-				  <g className="scene-object" data-id="leftDoor">
-					  <g className="scene-object-target">
-				    <polygon className="cls-1" points="603 254.51 461 230 461 767 603 694.55 603 254.51"/>
-				    <rect className="cls-2" x="433" y="230" width="28" height="537"/>
+				  <g key="leftDoor" className="scene-object" data-id="leftDoor">
+					<g key="target" className="scene-object-target">
+					    <polygon className="cls-1" points="603 254.51 461 230 461 767 603 694.55 603 254.51"/>
+					    <rect className="cls-2" x="433" y="230" width="28" height="537"/>
 				    </g>
 				  </g>
-				  <g className="scene-object" data-id="rightDoor">
-					  <g className="scene-object-target">
-				    <polygon className="cls-1" points="1469 238.39 1611 200 1611 836 1463 768.28 1469 238.39"/>
-				    <rect className="cls-2" x="1611" y="200" width="28" height="636" transform="translate(3250 1036) rotate(-180)"/>
+				  <g key="rightDoor" className="scene-object" data-id="rightDoor">
+					<g key="target" className="scene-object-target">
+					    <polygon className="cls-1" points="1469 238.39 1611 200 1611 836 1463 768.28 1469 238.39"/>
+					    <rect className="cls-2" x="1611" y="200" width="28" height="636" transform="translate(3250 1036) rotate(-180)"/>
 				    </g>
 				  </g>
-				  <g className="scene-object" data-id="centerDoor">
-					  <g className="scene-object-target">
-				    <rect className="cls-1" x="804" y="281" width="190" height="394"/>
-				    <rect className="cls-3" x="994" y="281" width="8" height="394"/>
+				  <g key="centerDoor" className="scene-object" data-id="centerDoor">
+					<g key="target" className="scene-object-target">
+					    <rect className="cls-1" x="804" y="281" width="190" height="394"/>
+					    <rect className="cls-3" x="994" y="281" width="8" height="394"/>
 				    </g>
 				  </g>
 				</svg>

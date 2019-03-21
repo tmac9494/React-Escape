@@ -11,26 +11,29 @@ function ElementConstruct(svg, options={}) {
 	const build = elements.slice().map((elem, i) => {
 		let clone = false;
 		let newElem = false;
+		const settings = options.sceneObjects[elem.props["data-id"]];
 
 
 		// get child to frame
 		if (elem.props.className.includes(rx8pParentClass)) {
 			// console.log(elem.props.children)
 			let groupChildren = elem.props.children;
+			console.log(groupChildren)
 			let shouldClone = Array.isArray(groupChildren)
 				? groupChildren.filter(item => item.props.className.includes(rx8pTargetClass))[0]
 				: groupChildren.props.className.includes(rx8pTargetClass) 
 				? groupChildren
 				: null;
 
+
 			// if valid clone element
 			if (shouldClone !== null) {
 
-				let customProps = {key:i, className: "scene-object-frame"};
+				let customProps = {key:i};
+				if (settings.retainEventPosition) customProps.className = "scene-object-frame";
 				console.log(shouldClone)
 				if (elem.props["data-id"]) {
 					//add props for state updates
-					const settings = options.sceneObjects[elem.props["data-id"]];
 					const event = settings.interactType === "click" ? "onClick" : "hover" ? "onMouseOver" : "onClick";
 
 					if (event === "onMouseOver") {
@@ -39,17 +42,20 @@ function ElementConstruct(svg, options={}) {
 					} else customProps[event] = () => options.stateSetter(elem.props["data-id"]);
 				}
 				console.log(customProps)
+				
 				// frame
-				clone = React.cloneElement(
-					shouldClone,
-					customProps,
-					shouldClone.props.children,
-				)
+				// if (settings.retainEventPosition) {
+					clone = React.cloneElement(
+						shouldClone,
+						customProps,
+						shouldClone.props.children,
+					)
+				// }
 				// craft new grouped element
 				newElem = React.cloneElement(
 					elem,
 					{},
-					[shouldClone,clone]
+					(settings.retainEventPosition ? [shouldClone,clone] : [clone])
 				)
 			}
 
