@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import bg from '../../Assets/doorTestBg.png';
 import svgBuild from './SvgElementConstructor';
+import InteractionManager from '../../Managers/Interactions.js';
 
 function Scene(props) {
 
@@ -42,38 +43,17 @@ function Scene(props) {
 		if (sceneFG !== null & interactions !== null) {
 			let svg = Object.assign({}, sceneFG);
 			let newElem = [];
-			sceneFG.props.children.forEach((child, i) => {
-				if (child.props['data-id']) {
+			sceneFG.props.children.forEach((svgElement, i) => {
 
-					// test to see if tranformation is true
-					let style = interactions[child.props['data-id']] ? props.sceneObjects[child.props['data-id']].interactCss : {};
+				if (svgElement.props['data-id']) { // if Element has a sceneOBject id run it through the interaction Manger with the needed props
 
-					// generate new svg children after interaction 
-				 	let newChildren = child.props.children.map((dirChild, i) => {
+					let elementUpdate = InteractionManager(interactions, svgElement, props.sceneObjects);
+				 	newElem.push(elementUpdate);
 
-				 		let returnChild;
+				} else newElem.push(svgElement);
 
-				 		if (dirChild.props.className.includes(rx8pTargetClass)) {
-				 			console.log("clone 2")
-					 		const clone = React.cloneElement(
-						 		dirChild,
-						 		{style: style},
-						 	);
-						 	returnChild = clone;
-				 		} else { returnChild = dirChild };
-				 		
-				 		return returnChild;
-				 	})
-
-				 	// clone group wrapper and add to new svg
-			 		const wrapClone = React.cloneElement(
-			 			child,
-			 			child.props,
-			 			newChildren
-			 		);
-				 	newElem.push(wrapClone);
-				} else newElem.push(child);
 			})
+
 			const newSvg = React.cloneElement(
 				sceneFG,
 				{},
