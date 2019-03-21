@@ -20,9 +20,12 @@ div {
 svg {
 	.scene-object-target {
 		display:block;
-		transform-box: fill-box;
+		&, .animate-child {
+			transform-box: fill-box;
+			display:block;
+			transition:.32s;
+		}
 		fill: rgb(255, 46, 234);
-		transition:.32s;
 	}
 	.orig-l-b {
 		transform-origin: left bottom;
