@@ -125,7 +125,10 @@ const gameData = {
 				},
 				centerDoor: {
 					interactType: "click",
-					interactCss: {transform: "translateX(100%"}
+					interactCss: {transform: "translateX(100%"},
+					childUpdates: {
+						rightSide: [true, {fill:"#000"}]
+					}
 				}
 			},
 			svgFG: (
@@ -145,7 +148,7 @@ const gameData = {
 				  <g key="centerDoor" className="scene-object" data-id="centerDoor">
 					<g key="target" className="scene-object-target">
 					    <rect className="cls-1" x="804" y="281" width="190" height="394"/>
-					    <rect className="cls-3" x="994" y="281" width="8" height="394"/>
+					    <rect className="cls-3" childid="rightSide" x="994" y="281" width="8" height="394"/>
 				    </g>
 				  </g>
 				</svg>

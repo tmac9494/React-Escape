@@ -13,6 +13,7 @@ function InteractionManager(interactions, svgElement, sceneObjects) {
 	let style = interactions[svgElement.props['data-id']] 
 			? sceneObjects[svgElement.props['data-id']].interactCss 
 			: {};
+	const childUpdates = sceneObjects[svgElement.props['data-id']].childUpdates;
 
 	// generate new svg children after interaction 
  	let newChildren = svgElement.props.children.map((dirChild, i) => {
@@ -21,9 +22,36 @@ function InteractionManager(interactions, svgElement, sceneObjects) {
 
  		if (dirChild.props.className.includes(rx8pTargetClass)) {
  			console.log("clone 2");
+ 			let newNestedChildren = false;
+ 			const nested = dirChild.props.children
+ 				? dirChild.props.children
+ 				: null;
+ 			console.log(nested)
+ 			if (nested !== null) {
+
+				newNestedChildren = nested.map((nestedElem, i) => {
+					console.log(nestedElem.props.childid)
+					if (nestedElem.props.childid) {
+						const newNestStyle = interactions[svgElement.props['data-id']] === childUpdates[nestedElem.props.childid][0]
+							? childUpdates[nestedElem.props.childid][1]
+							: {}
+						console.log(newNestStyle)
+						return(
+							React.cloneElement(
+								nestedElem, 
+								{style: newNestStyle}
+							)
+						);
+					} else {return nestedElem} 
+				})
+ 				
+ 			}
+
+ 			// clone element and return with new styles
 	 		const clone = React.cloneElement(
 		 		dirChild,
 		 		{style: style},
+		 		(newNestedChildren ? newNestedChildren : dirChild.props.children)
 		 	);
 		 	returnChild = clone;
  		} else { returnChild = dirChild };
