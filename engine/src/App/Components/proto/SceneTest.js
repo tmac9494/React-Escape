@@ -41,7 +41,6 @@ function Scene(props) {
 	// manage svg changes on interaction
 	useEffect(() => {
 		if (sceneFG !== null & interactions !== null) {
-			let svg = Object.assign({}, sceneFG);
 			let newElem = [];
 			sceneFG.props.children.forEach((svgElement, i) => {
 
